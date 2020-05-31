@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 const app = express()
+const port= process.env.PORT || 3000
 const hbs=require('hbs')
 const geocode = require('./utils/geocode.js')
 const forecast= require('./utils/forecast.js')
@@ -83,6 +84,6 @@ app.get('*',(req,res)=>{
         name:'andrew'
     })
 })
-app.listen(3000,()=>{
-    console.log('this is running')
+app.listen(port,()=>{
+    console.log('this is running on'+ port)
 })
