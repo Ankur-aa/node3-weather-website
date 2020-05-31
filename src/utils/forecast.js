@@ -11,7 +11,7 @@ const forecast =(longitude,latitude,callback)=>{
          callback('location not found',undefined)
      }
      else{
-         callback(undefined,'it is ' + response.body.current.weather_descriptions[0])
+         callback(undefined,response.body.current.observation_time+ 'it is ' + response.body.current.weather_descriptions[0])
           }
       })
  }
